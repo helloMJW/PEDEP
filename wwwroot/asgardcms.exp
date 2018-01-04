@@ -1,0 +1,19 @@
+#! /usr/bin/expect
+set timeout 10
+cd asgardcms
+spawn php artisan asgard:install -f
+expect "mysql*"
+send "mysql\r"
+expect "host*"
+send "mysql5.6\r"
+expect "port*"
+send "\r"
+expect "name*"
+send "asgardcms\r"
+expect "username*"
+send "root\r"
+expect "password"
+send "root\r"
+expect "localhost*"
+send "\r"
+expect eof
