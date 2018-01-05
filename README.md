@@ -3,4 +3,4 @@
 
 ## 一键部署项目
 
-[Laravel-asgardcms](./tree/asgardcms)
+[Laravel-asgardcms](/tree/asgardcms)
