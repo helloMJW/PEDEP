@@ -4,6 +4,7 @@
 ## 一键部署项目
 
 - Laravel-asgardcms
+- Laravel-october
 
 
 ## 任务
