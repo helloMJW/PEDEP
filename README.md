@@ -1,10 +1,15 @@
 # dockerPhpDemo
-相关PHP开源项目的环境, 一键部署开源系统
+基于docker,相关PHP开源项目的环境, 一键部署开源系统
 
 ## 一键部署项目
 
 - Laravel-asgardcms
 - Laravel-october
+
+## 环境要求
+
+Linux,[docker](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#supported-storage-drivers),[docker-compose](https://docs.docker.com/compose/install/#install-compose)
+
 
 ## 部署程序
 
