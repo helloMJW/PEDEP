@@ -1,24 +1,29 @@
-# dockerPhpDemo
+# 一键部署项目
 基于docker,相关PHP开源项目的环境, 一键部署开源系统
 
-## 一键部署项目
+## 已有项目
 
-*部署项目切换*
-
-`git checkout webed`
-
-`git checkout lavalite`
-
-`git checkout october`
-
-`git checkout asgardcms`
+- Laravel-webed
+- Laravel-lavalite
+- Laravel-october
+- Laravel-asgardcms
 
 ## 环境要求
 
 Linux,[docker](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#supported-storage-drivers),[docker-compose](https://docs.docker.com/compose/install/#install-compose)
 
+## 使用教程
 
-## 部署程序
+1. 安装docker、docker-compose
+2. clone 当前项目到本地
+3. git checkout 项目 #eg: `git checkout october`
+4. `docker-compose up -d`
+5. `docker exec -it dockerphpdemo_php_1 sh`
+6. `./install.sh`
+7. 把HOSTS文件增加 IP 对应 d.项目名.com eg:`127.0.0.1 d.october.com`
+8. 访问域名-完成
+
+## 需求与问题
 
 > 部署语言无限制
 
