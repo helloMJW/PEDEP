@@ -42,4 +42,4 @@ Linux,[docker](https://docs.docker.com/engine/installation/linux/docker-ce/ubunt
 
 > 开源项目演示管理平台, 可以一键部署开源项目, 部署不同版本, 一键卸载项目. 目的: 学习优秀源码是一种捷径, 可直接看到项目运行, 可以调试代码, 系统不受污染, 免去安装时的更种奇葩问题.
 
-- [ ] 配置五个Laravel优秀项目-可一键部署的
+- [x] 配置四个Laravel优秀项目-可一键部署的
