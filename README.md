@@ -1,6 +1,9 @@
 
 ## webed
 
+[webed源码位置](https://github.com/sgsoft-studio/webed)
+
+
 ## 配置信息
 
 数据库名: `webed` 用户名: `root` 密码: `root`
