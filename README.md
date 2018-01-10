@@ -3,8 +3,15 @@
 
 ## 一键部署项目
 
-- Laravel-asgardcms
-- Laravel-october
+*部署项目切换*
+
+`git checkout webed`
+
+`git checkout lavalite`
+
+`git checkout october`
+
+`git checkout asgardcms`
 
 ## 环境要求
 
