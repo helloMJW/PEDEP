@@ -38,8 +38,8 @@ Linux,[docker](https://docs.docker.com/engine/installation/linux/docker-ce/ubunt
 
 ### 程序部署共享平台
 
-[x] 配置四个Laravel优秀项目-可一键部署的
-[ ] GITHUB登录-微博登录
+- [x] 配置四个Laravel优秀项目-可一键部署的
+- [ ] GITHUB登录-微博登录
 [ ] 首页-搜索页-详情页
 [ ] 推荐[酷 - 失望] 表情方式
 [ ] 添加分享-添加GITHUB仓库地址 自动抓取README.md内容 获取 `#` 标记为标题 全文为内容
