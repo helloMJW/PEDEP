@@ -47,6 +47,8 @@ Linux,[docker](https://docs.docker.com/engine/installation/linux/docker-ce/ubunt
 - [ ] 首页-搜索页-详情页
 - [ ] 推荐[酷 - 失望] 表情方式
 - [ ] 添加分享-添加GITHUB仓库地址 自动抓取README.md内容 获取 `#` 标记为标题 全文为内容
+- [ ] 积分功能-规则明细详见原型图
+- [ ] 详情页静态化
 
 
 ### 部署程序管理平台
