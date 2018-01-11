@@ -40,6 +40,27 @@ Linux,[docker](https://docs.docker.com/engine/installation/linux/docker-ce/ubunt
 3. 对于由于网络下载失败造成部署失败处理.
 
 
+### 程序部署共享平台(DEMO版)
+使用Laravel-搭建平台的DEMO版实现最简功能-用户-首页-内容页
+
+- GITHUB登录
+- 微博登录
+
+如果绑定多个第三方-且有已经绑定提示保留哪个
+
+#### 数据结构
+用户表 md5(uid)取后6位做用户名
+```
+id username nickname password create_time
+```
+第三方
+```
+id uid openid type create_time 
+```
+详情表
+```
+id uid title content view_total status create_time update_time 
+```
 ### 程序部署共享平台
 
 - [x] 配置四个Laravel优秀项目-可一键部署的
