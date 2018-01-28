@@ -78,3 +78,13 @@ id uid title content view_total status create_time update_time
 - [ ] 可获取平台上的资源进行自动部署
 - [ ] 可显示配置信息(数据信息 后台账号信息)
 
+### 程序环境资源
+
+- ecshop
+- phpwind
+- discuz
+- tp-shop
+- phpmywind
+- phpcms
+- onethink
+
