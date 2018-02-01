@@ -1,0 +1,9 @@
+FROM alpine:3.7
+RUN apk update
+RUN apk add subversion && mkdir /home/svn
+
+ENV TIMEZONE Asia/Shanghai
+
+WORKDIR /home/svn
+
+CMD ["svnserve", "-d", "-r", "/home/svn"]
