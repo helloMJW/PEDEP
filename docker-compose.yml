@@ -14,21 +14,16 @@ services:
         build:
             context: ./app/php5.6
             dockerfile: Dockerfile
+        volumes:
+            - ./svn:/home/svn
+            - ./wwwroot:/home/www-data
+            - ./app/php5.6/conf/php.ini:/usr/local/etc/php/php.ini
+    svn:
+        image: svn
+        build:
+            context: ./app/svn
+            dockerfile: Dockerfile
         ports:
             - "3690:3690"
         volumes:
-            - ./svn:/home/svn
-            - ./script/start.sh:/var/www/html/start.sh
-            - ./wwwroot:/home/www-data
-            - ./app/php5.6/conf/php.ini:/usr/local/etc/php/php.ini
-        command: ./start.sh
-    mysql:
-        image: mysql:5.6
-        ports:
-            - "3306:3306"
-        volumes:
-            - ./data/mysql:/var/lib/mysql
-        environment:
-            MYSQL_ROOT_PASSWORD: "root"
-            MYSQL_USER: "test"
-            MYSQL_PASSWORD: "test123"
+            - ./svn:/var/opt/svn

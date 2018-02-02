@@ -1,9 +1,11 @@
-FROM alpine:3.7
-RUN apk update
-RUN apk add subversion && mkdir /home/svn
+FROM alpine:3.6
 
-ENV TIMEZONE Asia/Shanghai
+CMD [ "/usr/bin/svnserve", "--daemon", "--foreground", "--root", "/var/opt/svn" ]
+EXPOSE 3690
+HEALTHCHECK CMD netstat -ln | grep 3690 || exit 1
+VOLUME [ "/var/opt/svn" ]
+WORKDIR /var/opt/svn
 
-WORKDIR /home/svn
+RUN apk add --no-cache subversion && \
+    rm -fr /var/cache/apk/*
 
-CMD ["svnserve", "-d", "-r", "/home/svn"]
