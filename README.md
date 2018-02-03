@@ -11,8 +11,6 @@
 
 ## 可用项目
 
-[Laravel-october](PEDEP/blob/october)
-
 - Laravel-webed
 - Laravel-lavalite
 - Laravel-october
