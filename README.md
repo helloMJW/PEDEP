@@ -9,82 +9,40 @@
 - 各种开源项目部署环境及安装脚本
 - 学习优秀源码是一种捷径, 可直接看到项目运行, 可以调试代码, 系统不>受污染, 免去安装时的更种奇葩问题
 
-## 可用项目
+## 项目todpole
 
-- Laravel-webed
-- Laravel-lavalite
-- Laravel-october
-- Laravel-asgardcms
+[蝌蚪游泳交互程序-workerman-todpole](https://github.com/walkor/workerman-todpole)
 
-## 环境要求
+## 构建记录
 
-Linux,[docker](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#supported-storage-drivers),[docker-compose](https://docs.docker.com/compose/install/#install-compose)
+- Mac OS X - 10.13.1  buil:17B1003
+- Docker version 17.12.0-ce, build c97c6d6
+- docker-compose version 1.18.0, build 8dd22a9
+- 初次编排于2018年03月10日09:06:12
 
-## 使用教程
+## 使用
 
-1. 安装docker、docker-compose
-2. clone 当前项目到本地
-3. git checkout 项目 #eg: `git checkout october`
-4. `docker-compose up -d`
-5. `docker exec -it dockerphpdemo_php_1 sh`
-6. `./install.sh`
-7. 把HOSTS文件增加 IP 对应 d.项目名.com eg:`127.0.0.1 d.october.com`
-8. 访问域名-完成
+`git clone https://github.com/helloMJW/PEDEP.git pedep`
 
-## 需求与问题
+`git checkout todpole`
 
-> 部署语言无限制
+`cd pedep/wwwroot`
 
-1. 如何校验是为部署完成?
-2. 如何防止重复部署(重复部署如何处理). 
-3. 对于由于网络下载失败造成部署失败处理.
+`git clone https://github.com/walkor/workerman-todpole.git`
 
+`docker pull composer:1.6`
 
-### 程序部署共享平台(DEMO版)
-使用Laravel-搭建平台的DEMO版实现最简功能-用户-首页-内容页
+`cd workerman-todpole`
 
-- GITHUB登录
-- 微博登录
+`docker run --rm -it -v $PWD:/app composer install`
 
-如果绑定多个第三方-且有已经绑定提示保留哪个
+`cd ../../`
 
-#### 数据结构
-用户表 md5(uid)取后6位做用户名
-```
-id username nickname password create_time
-```
-第三方
-```
-id uid openid type create_time 
-```
-详情表
-```
-id uid title content view_total status create_time update_time 
-```
-### 程序部署共享平台
+`docker-compose up -d`
 
-- [x] 配置四个Laravel优秀项目-可一键部署的
-- [ ] GITHUB登录-微博登录
-- [ ] 首页-搜索页-详情页
-- [ ] 推荐[酷 - 失望] 表情方式
-- [ ] 添加分享-添加GITHUB仓库地址 自动抓取README.md内容 获取 `#` 标记为标题 全文为内容
-- [ ] 积分功能-规则明细详见原型图
-- [ ] 详情页静态化
+`docker exec -it pedep_php_1 sh`
 
+`cd workerman-todpole && php start.php start -d`
 
-### 部署程序管理平台
-- [ ] 可以一键部署开源项目, 部署不同版本, 一键卸载项目
-- [ ] 可生成数据结构查看页
-- [ ] 可获取平台上的资源进行自动部署
-- [ ] 可显示配置信息(数据信息 后台账号信息)
-
-### 程序环境资源
-
-- ecshop
-- phpwind
-- discuz
-- tp-shop
-- phpmywind
-- phpcms
-- onethink
+浏览器: 127.0.0.1:8383
 
