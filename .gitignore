@@ -1,0 +1,6 @@
+wwwroot/*
+data/*
+logs/*
+!wwwroot/.gitignore
+!data/.gitignore
+!logs/.gitignore
